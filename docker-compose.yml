@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build:
+      context: .
+    image: your-rails-app
+    ports:
+      - "3000:3000"
+    volumes:
+      - ".:/app"
+    environment:
+      DATABASE_URL: sqlite3:/app/db/your_rails_app_development.sqlite3
+  
